@@ -1,0 +1,12 @@
+[Twitter]
+username=drikin
+password=k3594a
+
+[Blog]
+api_url=http://www.typepad.com/services/xmlrpc
+blog_id=6a00e5501843dd883401053612701c970b
+username=drikin
+password=k3594a
+
+[Prowl]
+api_key=6c22521b9669ae0b1c3ca9c6656ea1731d4cc8f3
