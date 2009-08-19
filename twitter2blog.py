@@ -37,41 +37,41 @@ if( not os.path.isfile(CONFIG_FILE) ):
 CONFIG = ConfigParser.SafeConfigParser()
 CONFIG.read(CONFIG_FILE)
 
-TWITTER_USERNAME  = CONFIG.get('Twitter', 'username')
-TWITTER_PASSWORD  = CONFIG.get('Twitter', 'password')
-TWITTER       = twitter.Api(username=TWITTER_USERNAME, password=TWITTER_PASSWORD)
+TWITTER_USERNAME    = CONFIG.get('Twitter', 'username')
+TWITTER_PASSWORD    = CONFIG.get('Twitter', 'password')
+TWITTER             = twitter.Api(username=TWITTER_USERNAME, password=TWITTER_PASSWORD)
 
-MT_API_URL      = CONFIG.get('Blog',  'api_url')
-MT_USERNAME     = CONFIG.get('Blog',  'username')
-MT_PASSWORD     = CONFIG.get('Blog',  'password')
-BLOG_ID       = CONFIG.get('Blog',  'blog_id')
-MT          = PyMT(MT_API_URL, MT_USERNAME, MT_PASSWORD)
+MT_API_URL          = CONFIG.get('Blog',  'api_url')
+MT_USERNAME         = CONFIG.get('Blog',  'username')
+MT_PASSWORD         = CONFIG.get('Blog',  'password')
+BLOG_ID             = CONFIG.get('Blog',  'blog_id')
+MT                  = PyMT(MT_API_URL, MT_USERNAME, MT_PASSWORD)
 
-PROWL_API_KEY   = CONFIG.get('Prowl',   'api_key')
-PROWL       = prowlpy.Prowl(PROWL_API_KEY)
+PROWL_API_KEY       = CONFIG.get('Prowl',   'api_key')
+PROWL               = prowlpy.Prowl(PROWL_API_KEY)
 
-DATETIME_FORMAT   = '%a %b %d %H:%M:%S +0000 %Y'
-TIMESTAMP_FORMAT  = '%H:%M:%S'
-TIMEDELTA     = -7
+DATETIME_FORMAT     = '%a %b %d %H:%M:%S +0000 %Y'
+TIMESTAMP_FORMAT    = '%H:%M:%S'
+TIMEDELTA           = -7
 
-LOG_DIR       = "log"
-SINCE_ID_FILENAME = LOG_DIR + "/since_id.log"
-DRAFT_FILENAME    = LOG_DIR + "/entry.txt"
+LOG_DIR             = "log"
+SINCE_ID_FILENAME   = LOG_DIR + "/since_id.log"
+DRAFT_FILENAME      = LOG_DIR + "/entry.txt"
 
-SHORT_FLICKR_URL  = "http://flic.kr/p/"
-FLICKR_URL        = "http://www.flickr.com/photos/"
-FLICKR_API_KEY    = '9f8e09d2dabc6ed826473d43a7ffecf0'
-FLICKR        = flickrapi.FlickrAPI(FLICKR_API_KEY)
+SHORT_FLICKR_URL    = "http://flic.kr/p/"
+FLICKR_URL          = "http://www.flickr.com/photos/"
+FLICKR_API_KEY      = '9f8e09d2dabc6ed826473d43a7ffecf0'
+FLICKR              = flickrapi.FlickrAPI(FLICKR_API_KEY)
 
-BASE_TAG    = "<p class='tweet'>%s</p>"
-IMG_TAG     = "<a href='%s'><img src='%s' /></a><br/>" 
-LINK_TAG    = "<a href='%s'>%s</a>"
-TWITTER_ID_TAG  = "<a href='http://twitter.com/%s'>%s</a>"
-TIME_TAG    = " <small><font color='gray'>%s</font></small>"
+BASE_TAG            = "<p class='tweet'>%s</p>"
+IMG_TAG             = "<a href='%s'><img src='%s' /></a><br/>" 
+LINK_TAG            = "<a href='%s'>%s</a>"
+TWITTER_ID_TAG      = "<a href='http://twitter.com/%s'>%s</a>"
+TIME_TAG            = " <small><font color='gray'>%s</font></small>"
 
-START_KEYWORD = " &gt;&gt;&gt;$"
-END_KEYWORD   = " &lt;&lt;&lt;$"
-EXCLUDE_KEYWORD = "^@"
+START_KEYWORD       = " &gt;&gt;&gt;$"
+END_KEYWORD         = " &lt;&lt;&lt;$"
+EXCLUDE_KEYWORD     = "^@"
   
 def b58decode(s):
   alphabet = '123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ'
