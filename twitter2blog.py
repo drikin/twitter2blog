@@ -69,9 +69,9 @@ LINK_TAG            = "<a href='%s'>%s</a>"
 TWITTER_ID_TAG      = "<a href='http://twitter.com/%s'>%s</a>"
 TIME_TAG            = " <small><font color='gray'>%s</font></small>"
 
-START_KEYWORD       = " &gt;&gt;&gt;$"
-END_KEYWORD         = " &lt;&lt;&lt;$"
-EXCLUDE_KEYWORD     = "^@"
+START_KEYWORD       = "^S\s"
+END_KEYWORD         = "^E\s"
+EXCLUDE_KEYWORD     = "^@\S*"
   
 def b58decode(s):
   alphabet = '123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ'
